@@ -49,7 +49,7 @@
             background-color: #fff;
             overflow-y: scroll;
             font-family: sans-serif;
-            font-size: 14px;
+            font-size: 16px;
             border-radius: 10px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border: 1px solid #ccc;
@@ -155,19 +155,22 @@
     </div>
 
 
-    <!--<div id="instructions">
-        @@ -144,8 +144,8 @@ <h3>General Info</h3>
-             <p>Address of destination (red): 13551 Westpark Dr, Houston, TX 77082</p>
-             <p>Distance of destination: 28.8 Miles</p>
-             <p>Estimated travel time to destination: 40 minutes</p>
-             <p>State of charge of battery: 15% Charge</p>
-             <p>Range of current battery: 45 Minutes</p>
-         </div>-->
+    <!-- SET ALL INSTRUCTION INFO BELOW -->
+    <div id="instructions">
+        <h3>General Info</h3>
+            <p>Current time: </p>
+            <p>Address of origin: </p>
+            <p>Address of destination: </p>
+            <p>Distance of destination: </p>
+            <p>Estimated travel time to destination: </p>
+            <p>State of charge of battery: </p>
+            <p>Range of current battery: </p>
+    </div>
 
     <!-- Instructions div displaying general information about the trip -->
-    <div id="instructions">
+    <!--<div id="instructions">
         <h2>General Info</h2>
-    </div>    
+    </div>-->   
 
     <!-- Log box div displaying user actions and providing a button to copy logs -->
     <div id="log-box">
@@ -203,7 +206,7 @@
         let poiMarkers = [];
 
         // Function to add a marker at a specific point on the map
-        // SET ALL INSTRUCTION INFO BELOW
+        /*
         const instructions = [ 
             { title: "Current time", info: " " }, 
             { title: "Address of origin", info: " " },
@@ -213,7 +216,7 @@
             { title: "State of charge of battery", info: " " },
             { title: "Range of current battery", info: " " }
         ];
-
+        */
 
         // Array to store charging station data
         // SET BOTH SETS OF CHARGING STATION INFO BELOW
@@ -503,6 +506,7 @@
             logAction(`Back button clicked for ${stationName}`);
         }
 
+        /*
         // Function to create instruction buttons
         function createInstructionButtons() {
             const instructionsDiv = document.getElementById('instructions');
@@ -607,6 +611,7 @@
                 poiMarkers.push({ marker, coordinates: [lng, lat], logMessage: `Clicked within buffer zone of POI: ${feature.text}` });
             }
         }
+        */
 
         // Define sources for start and end points
         // SET START AND END POINTS BELOW
