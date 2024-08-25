@@ -217,7 +217,7 @@
             { title: "Estimated Time to Destination", info: "40" },
             { title: "State of Charge of Battery", info: "68% Charge." },
             { title: "Range of Current Battery", info: "204 Minutes." },
-            { title: "Estimated Drive-distance with Current Charge", info: "137 Miles." },
+            { title: "Estimated Drive Distance with Current Charge", info: "137 Miles." },
             { title: "Type of Chargin Socket", info: "J1772." },
             { title: "kW Needed to Fully Charge Your Car", info: "19.2 kW." }
         ];
@@ -247,19 +247,19 @@
                         { type: 'J1772', value: '192' }
                     ],
                 socketAvalability: [
-                        { type: 'J1772', value: '0 available' }
+                        { type: 'J1772', value: '0' }
                     ],
 
                 energySource: '40% Grid, 60% Renewable',
 
                 chargingFee: '$0.00',
                 chargingFeeRate: 'per kWh',
-                parkingFee: 'free',
+                parkingFee: '$0.00',
                 parkingFeeRate: 'for any amount of time',
 
-                coffee: 'Yes <br><br> There is a coffee shop in walking distance 0.05 miles away.',
-                grocery: 'Yes <br><br> There is a grocery store in walking distance 0.5 miles away.',
-                sportsClothes: 'Yes <br><br> There is a sports or clothing store in walking distance 0.2 miles away.',
+                coffee: 'Yes. <br><br> There is a coffee shop in walking distance 0.05 miles away.',
+                grocery: 'Yes. <br><br> There is a grocery store in walking distance 0.5 miles away.',
+                sportsClothes: 'Yes. <br><br> There is a sports or clothing store in walking distance 0.2 miles away.',
                 
                 rating: '★ ★ ★ ★ ✰',
                 ratingNum: '55'
@@ -286,20 +286,20 @@
                         { type: 'J1772', value: '202' }
                     ],
                 socketAvalability: [
-                        { type: 'J1772', value: '1 available' }
+                        { type: 'J1772', value: '1' }
                     ],        
 
-                energySource: '100% Grid',
+                energySource: '100% Grid, 0% Renewable',
 
                 chargingFee: '$0.00',
-                chargingFeeRate: 'per kWh',
+                parkingFeeRate: 'for any amount of power',
 
-                parkingFee: 'free',
+                parkingFee: '$0.00',
                 parkingFeeRate: 'for any amount of time',
 
-                coffee: 'Yes <br><br> There is a coffee shop in walking distance 0.2 miles away.',
-                grocery: 'No <br><br> There are no grocery stores in walking distance.',
-                sportsClothes: 'No <br><br> There are no sports or clothing stores in walking distance.',
+                coffee: 'Yes. <br><br> There is a coffee shop in walking distance 0.2 miles away.',
+                grocery: 'No. <br><br> There are no grocery stores in walking distance.',
+                sportsClothes: 'No. <br><br> There are no sports or clothing stores in walking distance.',
                 
                 rating: '★ ★ ★ ★ ★ ',
                 ratingNum: '72'
@@ -583,7 +583,7 @@
             content = `<p style="font-size: 16px; padding: 5px;">${infoContent}</p>`;
 
             if (infoType === 'rating') {
-                content = `<p style="font-size: 16px; padding: 5px;"><span class="stars">${station.rating}</span> <br><br> There are ${station.ratingNum} total reviews</p>`;
+                content = `<p style="font-size: 16px; padding: 5px;"><b>Rating:</b><br><span class="stars">${station.rating}</span> <br><br> There are ${station.ratingNum} total reviews.</p>`;
                 console.log('Rating clicked');
             }
 
